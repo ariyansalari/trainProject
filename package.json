@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "colord": "^2.9.3",
     "next": "14.1.0",
     "react": "^18",
