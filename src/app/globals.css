@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: var(--font-yekan);
+}
+:lang(en) {
+  font-family: var(--font-figtree);
+}
