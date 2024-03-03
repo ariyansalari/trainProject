@@ -13,7 +13,7 @@ export default function Home() {
   <p>
     هر جای مسیر برنامه نویسی که باشی، با هم های استاده های با تجربه کلاسی می تونی بدون محدودیت به قله های بالاتر صعودی کنی . ما همیشه هواتو داریم
   </p>
-  <div className="mt-5 flex gap-4 justify-end ">
+  <div className="mt-5 flex gap-4 justify-center xl:justify-end">
   <Button variant="neutral" size="large">مشاوره برنامه نویسی</Button>
 
     <Button variant="primary" size="large">دوره های ری اکت و نکست</Button>
