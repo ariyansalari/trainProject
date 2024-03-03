@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "./_components";
 
 export default function Home() {
   return (
@@ -12,9 +13,17 @@ export default function Home() {
   <p>
     هر جای مسیر برنامه نویسی که باشی، با هم های استاده های با تجربه کلاسی می تونی بدون محدودیت به قله های بالاتر صعودی کنی . ما همیشه هواتو داریم
   </p>
+  <div className="mt-5 flex gap-4 justify-center xl:justify-end">
+  <Button variant="neutral" size="large">مشاوره برنامه نویسی</Button>
+
+    <Button variant="primary" size="large">دوره های ری اکت و نکست</Button>
+
+
+  </div>
   <Image className="grayscale hover:grayscale-0 transition-all mt-4 opacity-70 m-auto xl:m-0 self-end "  src={"/images/frameworks.png"}  width={412} height={39} alt="frameworks"/>
 </div>
 <Image src={"/images/programmer-landing.svg"} width={702} height={521} alt="programmer landing" />
+
 </div>
 
 </section>
