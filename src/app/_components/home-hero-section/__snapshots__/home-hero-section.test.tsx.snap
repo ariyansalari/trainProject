@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`display the home hero section : 
+        <section className="bg-hero-pattern bg-no-repeat mt-5 xl:mt-20 xl:bg-left">
+    <div className="container flex flex-col-reverse items-center xl:flex-row-reverse">
+  
+  <div className="flex flex-col gap-5 mt-12 pb-5 text-center xl:text-right">
+    <h3 className="text-xl dark:text-info xl:text-2xl">... خوش اومدی به</h3>
+    <h1 className="text-3xl lg:text-3xl xl:text-5xl font-black gradiant">مسیره صعود به قله های برنامه نویسی</h1>
+    <p>
+      هر جای مسیر برنامه نویسی که باشی، با هم های استاده های با تجربه کلاسی می تونی بدون محدودیت به قله های بالاتر صعودی کنی . ما همیشه هواتو داریم
+    </p>
+    <div className="mt-5 flex gap-4 justify-center xl:justify-end">
+    <Button variant="neutral" size="large">مشاوره برنامه نویسی</Button>
+  
+      <Button variant="primary" size="large">دوره های ری اکت و نکست</Button>
+  
+  
+    </div>
+    <Image className="grayscale hover:grayscale-0 transition-all mt-4 opacity-70 m-auto xl:m-0 self-end "  src={"/images/frameworks.png"}  width={412} height={39} alt="frameworks"/>
+  </div>
+  <Image src={"/images/programmer-landing.svg"} width={702} height={521} alt="programmer landing" />
+  
+  </div>
+  
+  </section> 1`] = `
+<div>
+  <section
+    class="bg-hero-pattern bg-no-repeat mt-5 xl:mt-20 xl:bg-left"
+  >
+    <div
+      class="container flex flex-col-reverse items-center xl:flex-row-reverse"
+    >
+      <div
+        class="flex flex-col gap-5 mt-12 pb-5 text-center xl:text-right"
+      >
+        <h3
+          class="text-xl dark:text-info xl:text-2xl"
+        >
+          ... خوش اومدی به
+        </h3>
+        <h1
+          class="text-3xl lg:text-3xl xl:text-5xl font-black gradiant"
+        >
+          مسیره صعود به قله های برنامه نویسی
+        </h1>
+        <p>
+          هر جای مسیر برنامه نویسی که باشی، با هم های استاده های با تجربه کلاسی می تونی بدون محدودیت به قله های بالاتر صعودی کنی . ما همیشه هواتو داریم
+        </p>
+        <div
+          class="mt-5 flex gap-4 justify-center xl:justify-end"
+        >
+          <button
+            class="btn btn-neutral btn-lg"
+            type="button"
+          >
+            مشاوره برنامه نویسی
+          </button>
+          <button
+            class="btn btn-primary btn-lg"
+            type="button"
+          >
+            دوره های ری اکت و نکست
+          </button>
+        </div>
+        <img
+          alt="frameworks"
+          class="grayscale hover:grayscale-0 transition-all mt-4 opacity-70 m-auto xl:m-0 self-end "
+          data-nimg="1"
+          decoding="async"
+          height="39"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fframeworks.png&w=828&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fframeworks.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fframeworks.png&w=828&q=75 2x"
+          style="color: transparent;"
+          width="412"
+        />
+      </div>
+      <img
+        alt="programmer landing"
+        data-nimg="1"
+        decoding="async"
+        height="521"
+        loading="lazy"
+        src="/images/programmer-landing.svg"
+        style="color: transparent;"
+        width="702"
+      />
+    </div>
+  </section>
+</div>
+`;
