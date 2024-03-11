@@ -1,0 +1,16 @@
+.card {
+  @apply relative flex flex-col rounded-lg dark:bg-base-50 w-80 overflow-hidden;
+
+  &-body {
+    @apply p-3 flex flex-col flex-auto gap-2 text-sm font-semibold leading-6;
+  }
+
+  &-title {
+    @apply text-lg font-bold dark:text-white/75 dark:hover:text-white transition duration-200 ease-in-out;
+  }
+
+  &-footer {
+    @apply p-3 font-bold  flex items-center gap-2 py-4 text-current border-t dark:border-base-content dark:border-opacity-10;
+  }
+
+}
