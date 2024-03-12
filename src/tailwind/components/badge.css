@@ -1,0 +1,54 @@
+.badge {
+    @apply inline-flex gap-1 items-center justify-center transition duration-200 ease-in-out rounded-md font-semibold;
+    @apply  leading-5  !bg-opacity-30 !border-opacity-30;
+    width: fit-content;
+    padding-left: 0.763rem;
+    padding-right: 0.763rem;
+
+    &-neutral {
+        @apply dark:border-base-content dark:bg-base-content dark:text-base-content;
+    }
+    &-primary {
+        @apply dark:border-primary dark:bg-primary dark:text-primary;
+    }
+    &-secondary {
+        @apply dark:border-secondary dark:bg-secondary dark:text-secondary;
+    }
+    &-accent {
+        @apply dark:border-accent dark:bg-accent dark:text-accent;
+    }
+    &-info {
+        @apply dark:border-transparent dark:bg-info dark:text-info;
+    }
+    &-success {
+        @apply dark:border-transparent dark:bg-success dark:text-success;
+    }
+    &-warning {
+        @apply dark:border-transparent dark:bg-warning dark:text-warning;
+    }
+    &-error {
+        @apply dark:border-transparent dark:bg-error dark:text-error;
+    }
+    &-ghost {
+        @apply dark:border-white dark:bg-white dark:text-base-300;
+    }
+
+    &-xs {
+        @apply h-5 text-xs font-bold
+    }
+
+    &-sm {
+        @apply h-6 text-sm
+    }
+
+    &-md {
+      @apply h-7 text-base
+    }
+
+    &-lg {
+        @apply h-8 text-lg
+    }
+
+
+
+}

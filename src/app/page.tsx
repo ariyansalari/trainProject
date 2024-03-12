@@ -2,6 +2,7 @@ import { CourseSummary } from "@/types";
 import { HomeHeroSection } from "./_components";
 import { News_Cycle } from "next/font/google";
 import { CourseCardList } from "./(courses)";
+import { IconCheck, IconStar } from "./_components/icons/icons";
 
 async function getNewestCoursers(count: number): Promise<CourseSummary[]> {
   const res = await fetch(`https://api.classbon.com/api/courses/newest/${count}`, {
