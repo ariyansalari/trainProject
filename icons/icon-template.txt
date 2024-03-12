@@ -1,0 +1,9 @@
+import { BaseIcon, SvgIcon } from "@/app";
+
+export default function SvgIcon(props:SvgIcon){
+    return (
+        <BaseIcon {...props} >
+        <%= contents %>
+        </BaseIcon>
+    )
+}
