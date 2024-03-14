@@ -7,3 +7,5 @@ export  * from "./badge"
 export * from "./icons"
 export * from './price'
 export * from "./feature"
+export * from "./placeholders"
+export * from "./testimonial"
