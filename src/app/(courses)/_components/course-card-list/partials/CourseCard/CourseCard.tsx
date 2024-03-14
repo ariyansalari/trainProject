@@ -1,4 +1,4 @@
-import { Badge } from "@/app";
+import { Badge, Price } from "@/app";
 import { IconArrowLeftFill, IconClock } from "@/app/_components/icons/icons";
 import { CourseSummary } from "@/types";
 import Image from "next/image";
@@ -31,11 +31,11 @@ export const CourseCard: React.FC<CourseCardProps> = ({
       <div className="card-body">
         <Link href={`course/${slug}`}>{title}</Link>
         <p className="text-wrap">{subTitle}</p>
-        <div>
+        <div className="flex items-center justify-between mt-3 ">
         <Badge variant="warning">
          <IconClock  width={16} height={16} />{duration}
           </Badge>  
-          {basePrice}
+          <Price price={basePrice} size="small" />
         </div>
       </div>
       <Link href={`course/${slug}`} className="card-footer justify-center animated-icon">
