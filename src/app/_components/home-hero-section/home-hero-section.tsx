@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '..'
 import Image from "next/image";
+import { IconArrowLeftFill } from '../icons/icons';
 export const HomeHeroSection:React.FC = () => {
   return (
     <section className="bg-hero-pattern bg-no-repeat mt-5 xl:mt-20 xl:bg-left">
@@ -15,7 +16,10 @@ export const HomeHeroSection:React.FC = () => {
     <div className="mt-5 flex gap-4 justify-center xl:justify-end">
     <Button variant="neutral" size="large">مشاوره برنامه نویسی</Button>
   
-      <Button variant="primary" size="large">دوره های ری اکت و نکست</Button>
+      <Button className='animated-icon '  variant="primary" size="large"
+      >
+        <IconArrowLeftFill  fill='currentColor'/>
+        دوره های ری اکت و نکست</Button>
   
   
     </div>
@@ -26,5 +30,6 @@ export const HomeHeroSection:React.FC = () => {
   </div>
   
   </section>
+  
   )
 }

@@ -6,3 +6,4 @@ export * from "./home-hero-section"
 export  * from "./badge"
 export * from "./icons"
 export * from './price'
+export * from "./feature"

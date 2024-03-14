@@ -1,0 +1,56 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_865_2090" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M0 0H48V48H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_865_2090)">
+<path d="M28.0312 5.625C28.0312 7.69603 26.3524 9.375 24.2812 9.375C22.2101 9.375 20.5312 7.69603 20.5312 5.625C20.5312 3.55397 22.2101 1.875 24.2812 1.875C26.3524 1.875 28.0312 3.55397 28.0312 5.625Z" stroke="#F9F9F9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask1_865_2090" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M0 0H48V48H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_865_2090)">
+<path d="M17.8125 21C17.8125 17.8064 20.4632 15.1875 23.733 15.1875H24.8295C28.0993 15.1875 30.75 17.8064 30.75 21" stroke="#F9F9F9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask2_865_2090" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M0 0H48V48H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_865_2090)">
+<path d="M12.0938 30.75C12.0938 32.821 10.4149 34.5 8.34375 34.5C6.27263 34.5 4.59375 32.821 4.59375 30.75C4.59375 28.679 6.27263 27 8.34375 27C10.4149 27 12.0938 28.679 12.0938 30.75Z" stroke="#F9F9F9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask3_865_2090" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M0 0H48V48H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask3_865_2090)">
+<path d="M1.875 46.125C1.875 42.9314 4.52569 40.3125 7.7955 40.3125H8.892C12.1618 40.3125 14.8125 42.9314 14.8125 46.125" stroke="#F9F9F9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask4_865_2090" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M0 0H48V48H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask4_865_2090)">
+<path d="M43.4062 30.75C43.4062 32.821 41.7274 34.5 39.6562 34.5C37.5851 34.5 35.9062 32.821 35.9062 30.75C35.9062 28.679 37.5851 27 39.6562 27C41.7274 27 43.4062 28.679 43.4062 30.75Z" stroke="#F9F9F9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask5_865_2090" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M0 0H48V48H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask5_865_2090)">
+<path d="M33.1875 46.125C33.1875 42.9314 35.8382 40.3125 39.108 40.3125H40.2045C43.4743 40.3125 46.125 42.9314 46.125 46.125" stroke="#F9F9F9" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask6_865_2090" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M0 0H48V48H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask6_865_2090)">
+<path d="M41.2332 20.0625C40.2371 15.9194 37.7657 12.3513 34.4065 9.94341" stroke="#007BEC" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask7_865_2090" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M0 0H48V48H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask7_865_2090)">
+<path d="M13.9688 10.0107C10.6572 12.4175 8.22265 15.958 7.23584 20.0625" stroke="#007BEC" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<mask id="mask8_865_2090" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+<path d="M0 0H48V48H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask8_865_2090)">
+<path d="M18.75 38.8125C20.475 39.3821 22.3184 39.75 24.2344 39.75C26.0466 39.75 27.7938 39.4147 29.4375 38.9029" stroke="#007BEC" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
