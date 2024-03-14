@@ -31,13 +31,12 @@ async function getNewestPosts(count: number): Promise<BlogPostSummary[]> {
 }
 export default async function Home() {
   const newestCoursesData = getNewestCoursers(4);
-  const newestBlogPostsData = getNewestCoursers(4);
+  const newestBlogPostsData = getNewestPosts(4);
 
   const [newestCourses, newestBlogPost] = await Promise.all([
-    newestBlogPostsData,
     newestCoursesData,
+    newestBlogPostsData,
   ]);
-  console.log(newestBlogPost);
 
   return (
     <>
@@ -97,14 +96,12 @@ export default async function Home() {
 
       <section className="container py-20">
         <div className="flex flex-col-reverse xl:flex-row gap-4 justify-center xl:justify-between items-center">
-       
           <Button
             variant="neutral"
             className="font-semibold"
             animatedIcon={true}
           >
             <IconArrowLeftFill fill="currentColor" />
-
             همه مقاله‌ها
           </Button>
           <div className="text-center xl:text-end">
