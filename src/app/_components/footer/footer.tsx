@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Avatar } from "..";
 export const Footer: React.FC = async () => {
   return (
     <div className="bg-base-100 text-base-content">
@@ -58,6 +59,7 @@ export const Footer: React.FC = async () => {
       <div className="bg-base-200 text-left" lang="en" dir="ltr">
         <div className="container py-10 flex justify-between items-center">
           <div className="flex gap-5 items-center ">
+            <Avatar src="/images/trafficLightAriyan.jpg" variant="warning"/>
             <div className="flex flex-col">
               <span className="text-base-content/50 ">Developed by:</span>
               <span className="text-lg font-bold tracking-wide">
