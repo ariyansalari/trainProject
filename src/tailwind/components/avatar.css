@@ -1,0 +1,39 @@
+.avatar {
+    @apply flex justify-center items-center aspect-square overflow-hidden rounded-full ring-2 ring-transparent ring-offset-base-100 ring-offset-2 bg-base-50;
+  
+    & > svg {
+      @apply opacity-40;
+    }
+  
+    &-neutral {
+      @apply ring-base-50;
+    }
+    &-primary {
+      @apply ring-primary;
+    }
+    &-secondary {
+      @apply ring-secondary;
+    }
+    &-accent {
+      @apply ring-accent;
+    }
+    &-info {
+      @apply ring-info;
+    }
+    &-success {
+      @apply ring-success;
+    }
+    &-warning {
+      @apply ring-warning;
+    }
+    &-error {
+      @apply ring-error;
+    }
+    &-ghost {
+      @apply ring-base-100;
+    }
+  
+    img {
+      @apply h-full w-full object-cover;
+    }
+  }
