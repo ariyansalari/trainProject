@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Badge } from "./badge";
 import { withTests } from "@storybook/addon-jest";
+import results from '../../../../.jest-test-results.json'
 
 const meta: Meta<typeof Badge> = {
   component: Badge,
