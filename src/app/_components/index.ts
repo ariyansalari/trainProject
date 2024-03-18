@@ -9,3 +9,4 @@ export * from './price'
 export * from "./feature"
 export * from "./placeholders"
 export * from "./testimonial"
+export * from "./avatar"
