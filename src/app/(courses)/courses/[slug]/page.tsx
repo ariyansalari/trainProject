@@ -1,4 +1,4 @@
-import { Rating } from '@/app'
+import { ProgressBar, Rating } from '@/app'
 import { API_URL } from '@/configs'
 import { CourseDetails } from '@/types'
 import React from 'react'
@@ -24,6 +24,10 @@ const  CoursesPageDetails=async ({params}:{params:{slug:string}}) => {
 
 <div className='col-span-10 xl:col-span-3 bg-primary '>
   <Rating rate={3} variant='info' size='small'/>
+  <ProgressBar value={75}/>
+  <ProgressBar value={75} variant='warning' size='tiny'/>
+  <ProgressBar value={75} variant='error' size='tiny'/>
+
 </div>
 <div className='col-span-10 xl:col-span-7  '>
 <h1 className="text-center xl:text-right text-2xl lg:text-3xl xl:text-4xl font-black leading-10">
