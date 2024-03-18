@@ -1,6 +1,6 @@
-import { SvgIcon } from ".";
+import { SvgIconProps } from ".";
 
-export const BaseIcon: React.FC<SvgIcon> = ({
+export const BaseIcon: React.FC<SvgIconProps> = ({
   color = "currentColor",
   width = 24,
   height = 24,
