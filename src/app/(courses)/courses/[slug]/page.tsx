@@ -9,7 +9,7 @@ import {
 import { API_URL } from "@/configs";
 import { CourseDetails } from "@/types";
 import React from "react";
-import { CourseAside } from "./_components";
+import { CourseAside, CourseComments } from "./_components";
 export async function generateStaticParams() {
   const slugs = await fetch(`${API_URL}/courses/slugs`).then((res) =>
     res.json()
@@ -40,7 +40,7 @@ const CoursesPageDetails = async ({ params }: { params: { slug: string } }) => {
     },
     {
       label: "دیدگاه ها و پرسش ها",
-      content: "course comment",
+      content: <CourseComments/>,
     },
     {
       label: "سوالات متداول",
