@@ -3,6 +3,7 @@ import "./globals.css";
 import { Figtree } from "next/font/google";
 import local from "next/font/local";
 import { Footer, Header } from "./_components";
+import { QueryProvider } from "@/providers";
 const figtree = Figtree({
   display: "swap",
   subsets: ["latin"],
@@ -55,9 +56,12 @@ export default function RootLayout({
       className={` dark ${figtree.variable} ${yekanFont.variable}`}
     >
       <body className="min-h-screen grid grid-rows-[80px_1fr_auto]  dark:bg-base-100 dark:text-base-content">
+        <QueryProvider>
         <Header />
         <main>{children}</main>
         <Footer />
+        </QueryProvider>
+   
       </body>
     </html>
   );

@@ -1,11 +1,4 @@
-import {
-  Accordion,
-  AccordionTab,
-  ProgressBar,
-  Rating,
-  Tab,
-  TabBar,
-} from "@/app";
+import { Accordion, AccordionTab, Tab, TabBar } from "@/app";
 import { API_URL } from "@/configs";
 import { CourseDetails } from "@/types";
 import React from "react";
@@ -31,8 +24,7 @@ const CoursesPageDetails = async ({ params }: { params: { slug: string } }) => {
     title: faq.question,
     content: faq.answer,
   }));
- 
-  
+
   const tabs: Tab[] = [
     {
       label: "مشخصات دوره",
@@ -40,11 +32,11 @@ const CoursesPageDetails = async ({ params }: { params: { slug: string } }) => {
     },
     {
       label: "دیدگاه ها و پرسش ها",
-      content: <CourseComments/>,
+      content: <CourseComments />,
     },
     {
       label: "سوالات متداول",
-      content: <AccordionTab data={faqs} />
+      content: <AccordionTab data={faqs} />,
     },
   ];
   return (
