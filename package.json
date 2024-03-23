@@ -13,6 +13,7 @@
     "test:generate-output": "jest --json --outputFile=.jest-test-results.json"
   },
   "dependencies": {
+    "axios": "^1.6.8",
     "classnames": "^2.5.1",
     "colord": "^2.9.3",
     "next": "14.1.0",
