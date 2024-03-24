@@ -4,6 +4,12 @@ import { Figtree } from "next/font/google";
 import local from "next/font/local";
 import { Footer, Header } from "./_components";
 import { QueryProvider } from "@/providers";
+import { Metadata } from "next";
+export const metadata:Metadata={
+  title:"trainProject",
+description:"courseTrain",
+}
+
 const figtree = Figtree({
   display: "swap",
   subsets: ["latin"],

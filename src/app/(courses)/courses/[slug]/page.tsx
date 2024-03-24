@@ -62,7 +62,7 @@ const CoursesPageDetails = async ({ params }: { params: { slug: string } }) => {
       <div className="col-span-10 xl:col-span-6 ">
         <TabBar tabs={tabs} />
       </div>
-      <div className="col-span-10 xl:col-span-4 bg-warning "></div>
+      <div className="col-span-10 xl:col-span-4"></div>
     </div>
   );
 };
