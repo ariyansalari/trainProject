@@ -1,15 +1,8 @@
-import {
-  Accordion,
-  AccordionTab,
-  ProgressBar,
-  Rating,
-  Tab,
-  TabBar,
-} from "@/app";
+import { Accordion, AccordionTab, Tab, TabBar } from "@/app";
 import { API_URL } from "@/configs";
 import { CourseDetails } from "@/types";
 import React from "react";
-import { CourseAside } from "./_components";
+import { CourseAside, CourseComments } from "./_components";
 export async function generateStaticParams() {
   const slugs = await fetch(`${API_URL}/courses/slugs`).then((res) =>
     res.json()
@@ -31,8 +24,7 @@ const CoursesPageDetails = async ({ params }: { params: { slug: string } }) => {
     title: faq.question,
     content: faq.answer,
   }));
- 
-  
+
   const tabs: Tab[] = [
     {
       label: "مشخصات دوره",
@@ -40,11 +32,11 @@ const CoursesPageDetails = async ({ params }: { params: { slug: string } }) => {
     },
     {
       label: "دیدگاه ها و پرسش ها",
-      content: "course comment",
+      content: <CourseComments />,
     },
     {
       label: "سوالات متداول",
-      content: <AccordionTab data={faqs} />
+      content: <AccordionTab data={faqs} />,
     },
   ];
   return (
@@ -70,7 +62,7 @@ const CoursesPageDetails = async ({ params }: { params: { slug: string } }) => {
       <div className="col-span-10 xl:col-span-6 ">
         <TabBar tabs={tabs} />
       </div>
-      <div className="col-span-10 xl:col-span-4 bg-warning "></div>
+      <div className="col-span-10 xl:col-span-4"></div>
     </div>
   );
 };

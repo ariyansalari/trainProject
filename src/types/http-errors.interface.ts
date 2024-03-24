@@ -1,6 +1,6 @@
 interface Problem {
   title: string;
-  statusCode: number;
+  status: number;
   detail?: string;
   errors?: Record<string, string[]>;
 }
@@ -11,6 +11,8 @@ interface ValidationError extends Problem {}
 interface NotFoundError extends Problem {}
 interface UnhandledExeption extends Problem {}
 interface NetworkError extends Problem {}
+type ApiError=BadRequestError | NetworkError | NotFoundError | UnauthorizedError | UnhandledExeption | ValidationError;
+
 export type {
   Problem,
   BadRequestError,
@@ -19,4 +21,5 @@ export type {
   UnauthorizedError,
   UnhandledExeption,
   ValidationError,
+  ApiError
 };
