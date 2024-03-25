@@ -1,6 +1,7 @@
 'use client'
 import { useParams } from "next/navigation";
 import { useCourseComments } from "../../_api";
+import { Comment } from "@/app";
 
 export const CourseComments = () => {
   const {slug}=useParams()
@@ -16,8 +17,8 @@ export const CourseComments = () => {
   
   return( 
   <>
-{comments?.data.map((item)=>(
-  <p key={item.id } className="mb-8">{item.commentText}</p>
+{comments?.data.map((comment)=>(
+  <Comment key={`comment-${comment.id}`} {...comment} variant="info"/>
 ))}
   </>
   )

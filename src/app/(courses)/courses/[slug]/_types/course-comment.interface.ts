@@ -1,14 +1,7 @@
-export interface CourseCommnet {
-    id:number;
-    date:string;
-    userId:number|undefined ;
-    fullName :string;
-    commentText:string;
-    score:number | null ;
-    isResponse :boolean;
-}
+import { Comment } from "@/types";
+
 
 export interface CourseCommnetList {
-    data:CourseCommnet[];
+    data:Comment[];
     nextPage:number;
 }

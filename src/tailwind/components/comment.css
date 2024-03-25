@@ -1,0 +1,117 @@
+.comment {
+    @apply grid grid-cols-2 gap-x-3 gap-y-1 py-1 mb-8 text-base leading-7;
+    &-image {
+      @apply self-end row-span-2;
+    }
+    &-header {
+      @apply text-sm row-start-1;
+    }
+    &-footer {
+      @apply text-sm row-start-3;
+    }
+    &-bubble {
+      @apply block w-fit px-4 py-1 relative rounded-lg;
+      max-width: 600px;
+      &:before {
+        @apply w-3 h-3 absolute bottom-0;
+        background-color: inherit;
+        content: "";
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+  
+      min-height: 2.75rem;
+      min-width: 2.75rem;
+  
+      /* default */
+      & {
+        @apply dark:bg-base-50 dark:text-base-content;
+      }
+  
+      /* brand colors */
+      &-neutral {
+        @apply dark:bg-base-50 dark:text-base-content;
+      }
+      &-primary {
+        @apply dark:bg-primary/80 dark:text-primary-content;
+      }
+      &-secondary {
+        @apply dark:bg-secondary/80 dark:text-secondary-content;
+      }
+      &-accent {
+        @apply dark:bg-accent/80 dark:text-accent-content;
+      }
+  
+      /* state colors */
+      &-info {
+        @apply dark:bg-info/80 dark:text-info-content;
+      }
+      &-success {
+        @apply dark:bg-success/80 dark:text-success-content;
+      }
+      &-warning {
+        @apply dark:bg-warning/80 dark:text-warning-content;
+      }
+      &-error {
+        @apply dark:bg-error/80 dark:text-error-content;
+      }
+    }
+    &-start {
+      @apply place-items-start;
+      grid-template-columns: auto 1fr;
+      .comment-header {
+        @apply col-start-2;
+      }
+      .comment-footer {
+        @apply col-start-2;
+      }
+      .comment-image {
+        @apply col-start-1;
+      }
+      .comment-bubble {
+        @apply col-start-2;
+        &:before {
+          mask-image: url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");
+          [dir="rtl"] & {
+            mask-image: url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");
+          }
+        }
+      }
+    }
+    &-end {
+      @apply place-items-end mb-20;
+      grid-template-columns: 1fr auto;
+      .comment-header {
+        @apply col-start-1;
+      }
+      .comment-footer {
+        @apply col-start-1;
+      }
+      .comment-image {
+        @apply col-start-2;
+      }
+      .comment-bubble {
+        @apply col-start-1;
+        &:before {
+          mask-image: url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 1 3 L 3 3 C 2 3 0 1 0 0'/%3e%3c/svg%3e");
+          [dir="rtl"] & {
+            mask-image: url("data:image/svg+xml,%3csvg width='3' height='3' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='black' d='m 0 3 L 3 3 L 3 0 C 3 1 1 3 0 3'/%3e%3c/svg%3e");
+          }
+        }
+      }
+    }
+    &-start .comment-bubble {
+      @apply rounded-br-none;
+      &:before {
+        right: -0.75rem;
+      }
+    }
+  
+    &-end .comment-bubble {
+      @apply rounded-bl-none;
+      &:before {
+        right: 100%;
+      }
+    }
+  }
