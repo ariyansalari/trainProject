@@ -36,10 +36,18 @@ export const avatarSize:story={
     render:()=>(
         <>
         <Avatar size="large"/>
-        <Avatar size="small"/>
         <Avatar size="normal"/>
+        <Avatar size="small"/>
+
         <Avatar size="tiny"/>
 
+        </>
+    )
+}
+export const testAvatar:story={
+    render:(arg)=>(
+        <>
+        <Avatar {...arg}/>
         </>
     )
 }
