@@ -1,4 +1,4 @@
-import { BaseIcon, SvgIconProps } from ".";
+import { BaseIcon, SvgIconProps } from "..";
 
 export default function SvgIcon(props:SvgIconProps){
     return (

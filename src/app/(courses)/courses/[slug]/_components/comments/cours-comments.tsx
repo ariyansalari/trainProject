@@ -1,7 +1,7 @@
 "use client";
 import { useParams } from "next/navigation";
 import { useCourseComments } from "../../_api";
-import { Button, Comment, IconRefresh, TextPlaceholder } from "@/app";
+import { Alert, Button, Comment, IconRefresh, TextPlaceholder } from "@/app";
 import { Fragment, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -33,7 +33,7 @@ fetchNextPage()
 if(error){
   return (
     <>
-     <p>خطا در برقراری ارتباط با سرور</p>
+     <Alert variant="error">خطا در برقراری ارتباط با سرور</Alert>
                 <div className="text-center mt-3">
                     <Button
                         variant="neutral"

@@ -1,0 +1,60 @@
+.alert {
+    @apply p-4 rounded-lg  border dark:border-base-200 text-base flex gap-2 items-center;
+    > svg {
+        @apply dark:fill-info;
+    }
+    &-neutral {
+        @apply text-base dark:border-white/25 dark:bg-base-100;
+        > svg {
+            @apply fill-white;
+        }
+    }
+    &-ghost {
+        @apply text-base dark:border-white/25 dark:bg-base-100;
+        > svg {
+            @apply dark:fill-white;
+        }
+    }
+    &-primary {
+        @apply dark:text-primary dark:border-primary/50 dark:bg-base-100;
+        > svg {
+            @apply dark:fill-primary;
+        }
+    }
+    &-secondary {
+        @apply dark:text-secondary dark:border-secondary/50 dark:bg-base-100;
+        > svg {
+            @apply dark:fill-secondary;
+        }
+    }
+    &-accent {
+        @apply dark:text-accent dark:border-accent/50 dark:bg-base-100;
+        > svg {
+            @apply dark:fill-accent;
+        }
+    }
+    &-info {
+        @apply dark:text-info dark:border-info/50 dark:bg-base-100;
+        > svg {
+            @apply dark:fill-info;
+        }
+    }
+    &-success {
+        @apply dark:text-success dark:border-success/50 dark:bg-base-100;
+        > svg {
+            @apply dark:fill-success;
+        }
+    }
+    &-warning {
+        @apply dark:text-warning dark:border-warning/50 dark:bg-base-100;
+        > svg {
+            @apply dark:fill-warning;
+        }
+    }
+    &-error {
+        @apply dark:text-error dark:border-error/50 dark:bg-base-100;
+        > svg {
+            @apply dark:fill-error;
+        }
+    }
+}
