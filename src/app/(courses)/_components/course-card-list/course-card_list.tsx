@@ -3,12 +3,9 @@ import React from "react";
 import { CourseCard } from "./partials";
 import { API_URL } from "@/configs";
 async function getNewestCoursers(count: number): Promise<CourseSummary[]> {
-  await new Promise((resolve)=>setTimeout(resolve,3000));
+  await new Promise((resolve)=>setTimeout(resolve,2000));
   const res = await fetch(`${API_URL}/courses/newest/${count}`, {
     cache: "no-store",
-    next: {
-      revalidate: 24 * 60 * 60,
-    },
   }); 
   return res.json();
 }
