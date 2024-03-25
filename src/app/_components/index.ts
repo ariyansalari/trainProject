@@ -15,3 +15,4 @@ export * from "./progressBar"
 export * from "./tabBar"
 export * from "./accordion"
 export * from './comment'
+export * from "./alert"
