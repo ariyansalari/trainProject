@@ -5,6 +5,7 @@ import local from "next/font/local";
 import { Footer, Header } from "./_components";
 import { QueryProvider } from "@/providers";
 import { Metadata } from "next";
+import NextTopLoader from "nextjs-toploader";
 export const metadata:Metadata={
   title:"trainProject",
 description:"courseTrain",
