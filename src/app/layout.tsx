@@ -63,7 +63,6 @@ export default function RootLayout({
       className={` dark ${figtree.variable} ${yekanFont.variable}`}
     >
       <body className="min-h-screen grid grid-rows-[80px_1fr_auto]  dark:bg-base-100 dark:text-base-content">
-        <NextTopLoader showSpinner={false} color="var(--color-primary)"/>
         <QueryProvider>
         <Header />
         <main>{children}</main>
