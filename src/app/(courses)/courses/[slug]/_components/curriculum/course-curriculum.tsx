@@ -33,7 +33,7 @@ console.log(activeIndex);
                                 {index}
                             </span>
                             <span className="ml-auto">{chapter.title}</span>
-                            <div className="flex gap-2 ml-3">
+                            <div className="hidden md:flex gap-2 ml-3">
                                 <Badge variant="info">
                                     {chapter.numOfLectures} مبحث{" "}
                                 </Badge>

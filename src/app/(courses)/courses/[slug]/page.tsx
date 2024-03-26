@@ -1,8 +1,9 @@
-import { Accordion, AccordionTab, Tab, TabBar } from "@/app";
+import { Accordion, AccordionTab, Tab, TabBar, VideoPlayer } from "@/app";
 import { API_URL } from "@/configs";
 import { CourseChapter, CourseDetails } from "@/types";
 import React from "react";
 import { CourseAside, CourseComments, CourseCurriculum } from "./_components";
+import Image from "next/image";
 export async function generateStaticParams() {
   const slugs = await fetch(`${API_URL}/courses/slugs`).then((res) =>
     res.json()
@@ -60,7 +61,13 @@ const CoursesPageDetails = async ({ params }: { params: { slug: string } }) => {
           {course.subTitle}
         </h2>
 
-        <div className=" mt-5">Video Player Component</div>
+        <div className=" mt-5">
+          {course.videoUrl ?(
+<VideoPlayer src={course.videoUrl} poster={`${API_URL}/picture/${course.coverImageId}`}/>
+          ):(
+          <Image width={550} height={327} className="w-full" src={`https://api.classbon.com/api/picture/${course.coverImageId}`} alt={course.title}/>
+          )}
+        </div>
       </div>
       <div className="col-span-10 xl:col-span-3  ">
         <CourseAside />

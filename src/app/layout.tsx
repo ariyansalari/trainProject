@@ -5,6 +5,7 @@ import local from "next/font/local";
 import { Footer, Header } from "./_components";
 import { QueryProvider } from "@/providers";
 import { Metadata } from "next";
+import NextTopLoader from "nextjs-toploader";
 export const metadata:Metadata={
   title:"trainProject",
 description:"courseTrain",
@@ -62,6 +63,7 @@ export default function RootLayout({
       className={` dark ${figtree.variable} ${yekanFont.variable}`}
     >
       <body className="min-h-screen grid grid-rows-[80px_1fr_auto]  dark:bg-base-100 dark:text-base-content">
+        <NextTopLoader showSpinner={false} color="var(--color-primary)"/>
         <QueryProvider>
         <Header />
         <main>{children}</main>
