@@ -1,8 +1,9 @@
 import React from 'react'
+import { SignInForm } from './components'
 
 const SignInPage = async() => {
   return (
-    <div>page</div>
+  <SignInForm/>
   )
 }
 
