@@ -14,6 +14,7 @@ export { default as IconDoc } from './src/doc';
 export { default as IconDot } from './src/dot';
 export { default as IconDownload } from './src/download';
 export { default as IconEnrollment } from './src/enrollment';
+export { default as IconError } from './src/error';
 export { default as IconEye } from './src/eye';
 export { default as IconFullScreen } from './src/full-screen';
 export { default as IconInfo } from './src/info';
