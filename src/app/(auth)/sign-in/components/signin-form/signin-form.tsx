@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { Button, TextInput } from "@/app";
 import { SignInFormProps, useSignIn } from "@/app/(auth)";
@@ -27,7 +27,7 @@ router.push(`/verify?mobile=${getValues('mobile')}`)
   useEffect(()=>{
 showNotification({
   type:'error',
-  message:"error"
+  message:"عملیات با موفقیت انجام نشد"
 })
   },[])
   return (
