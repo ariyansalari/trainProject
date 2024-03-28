@@ -18,3 +18,4 @@ export * from './comment'
 export * from "./alert"
 export * from "./video-player";
 export * from "./textbox"
+export * from "./form-input"
