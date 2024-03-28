@@ -1,10 +1,16 @@
-import { QueryCache, QueryClient } from "@tanstack/react-query";
+import { MutationCache, QueryCache, QueryClient } from "@tanstack/react-query";
+import { error } from "console";
 
 export const queryClient =new QueryClient({
     queryCache :new QueryCache({
 onError:(error)=>{
     //show notification 
 }
+    }),
+    mutationCache :new MutationCache ({
+        onError:(error)=>{
+
+        }
     }),
     defaultOptions:{
         queries:{

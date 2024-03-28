@@ -1,7 +1,8 @@
 "use client";
 
-import { Button, TextBox, TextInput } from "@/app";
-import { SignInFormProps } from "@/app/(auth)";
+import { Button, TextInput } from "@/app";
+import { SignInFormProps, useSignIn } from "@/app/(auth)";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 export const SignInForm = () => {
@@ -9,9 +10,16 @@ export const SignInForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    getValues
   } = useForm<SignInFormProps>();
-  const onSubmit = (data: any) => {
-    console.log(data);
+  const router=useRouter()
+  const signIn=useSignIn({
+    onSuccess:()=>{
+router.push(`/verify?mobile=${getValues('mobile')}`)
+    }
+  })
+  const onSubmit = (data: SignInFormProps) => {
+   signIn.SubmitForm(data);
   };
   return (
     <>
@@ -37,7 +45,7 @@ export const SignInForm = () => {
           }}
           errors={errors}
         />
-        <Button type="submit" variant="primary">
+        <Button type="submit" variant="primary" isLoading={signIn.isPending}>
           تایید و دریافت کد
         </Button>
       </form>
