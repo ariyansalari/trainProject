@@ -5,4 +5,5 @@ export * from "./testimonials.type"
 export * from "./course-details.interface"
 export * from "./comment.interface"
 export * from "./course-chapter.interface"
-export * from "./course-lecture.interface"
+export * from "./course-lecture.interface";
+export * from "./notification.interface"
