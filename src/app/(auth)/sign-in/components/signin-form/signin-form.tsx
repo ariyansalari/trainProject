@@ -2,7 +2,9 @@
 
 import { Button, TextInput } from "@/app";
 import { SignInFormProps, useSignIn } from "@/app/(auth)";
+import { useNotificationStore } from "@/store";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 
 export const SignInForm = () => {
@@ -21,6 +23,13 @@ router.push(`/verify?mobile=${getValues('mobile')}`)
   const onSubmit = (data: SignInFormProps) => {
    signIn.SubmitForm(data);
   };
+  const showNotification=useNotificationStore(state=>state.showNotification)
+  useEffect(()=>{
+showNotification({
+  type:'error',
+  message:"error"
+})
+  },[])
   return (
     <>
       <h5 className="text-2xl">ورود | ثبت نام</h5>
