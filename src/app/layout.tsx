@@ -2,7 +2,7 @@ import "./globals.css";
 
 import { Figtree } from "next/font/google";
 import local from "next/font/local";
-import { Footer, Header } from "./_components";
+import { Footer, Header, Notifications } from "./_components";
 import { QueryProvider } from "@/providers";
 import { Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
@@ -64,6 +64,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen grid grid-rows-[80px_1fr_auto]  dark:bg-base-100 dark:text-base-content">
         <NextTopLoader showSpinner={false} color="var(--color-primary)"/>
+        <Notifications/>
         <QueryProvider>
         <Header />
         <main>{children}</main>
