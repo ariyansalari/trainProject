@@ -58,7 +58,6 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      dir="ltr"
       className={` dark ${figtree.variable} ${yekanFont.variable}`}
     >
       <body className="min-h-screen grid grid-rows-[80px_1fr_auto]  dark:bg-base-100 dark:text-base-content">

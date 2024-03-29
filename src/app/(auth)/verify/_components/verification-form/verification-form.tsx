@@ -1,9 +1,10 @@
 'use client'
-import { Button } from '@/app'
+import { AuthCode, AuthCodeRef, Button } from '@/app'
 import Link from 'next/link'
-import React from 'react'
+import React, { useRef } from 'react'
 
 export const VerificationForm = () => {
+  const authCodeRef=useRef<AuthCodeRef>(null)
   return (
     <>
     <h5 className="text-2xl">کد تایید</h5>
@@ -11,11 +12,15 @@ export const VerificationForm = () => {
     <form
       className="flex flex-col gap-6 mt-10 flex-1"
     >
-      <p>Auth code</p>
+    <AuthCode ref={authCodeRef} className="mt-10 " onChange={value=>{
+console.log(value);
+
+    }}/>
 
 
       Timer
       <Button
+      onClick={authCodeRef.current?.focus}
         isLink={true}
       
       >
