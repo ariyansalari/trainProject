@@ -19,4 +19,5 @@ export * from "./alert"
 export * from "./video-player";
 export * from "./textbox"
 export * from "./form-input"
-export * from "./notification"
+export * from "./notification";
+export * from "./auth-code"
