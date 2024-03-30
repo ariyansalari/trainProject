@@ -1,0 +1,196 @@
+.timer {
+    @apply flex justify-center;
+  
+    &-xs {
+      @apply gap-3;
+      .timer-progress {
+        > span {
+          @apply text-xl;
+        }
+        &-date-part {
+          @apply -bottom-5  text-[0.6rem];
+        }
+      }
+    }
+  
+    &-sm {
+      @apply gap-4;
+      .timer-progress {
+        > span {
+          @apply text-2xl;
+        }
+        &-date-part {
+          @apply -bottom-6  text-[0.65em];
+        }
+      }
+    }
+  
+    &-md {
+      @apply gap-5;
+      .timer-progress {
+        > span {
+          @apply text-3xl;
+        }
+        &-date-part {
+          @apply -bottom-7  text-xs;
+        }
+      }
+    }
+  
+    &-lg {
+      @apply gap-4;
+      .timer-progress {
+        > span {
+          @apply text-4xl;
+        }
+        &-date-part {
+          @apply -bottom-8  text-xs;
+        }
+      }
+    }
+  
+    &-ghost {
+      .timer-progress {
+        &-back-bar {
+          @apply stroke-white;
+          opacity: 0.2;
+        }
+  
+        &-front-bar {
+          @apply stroke-white;
+        }
+      }
+    }
+  
+    &-primary {
+      .timer-progress {
+        &-back-bar {
+          @apply stroke-primary;
+          opacity: 0.2;
+        }
+  
+        &-front-bar {
+          @apply stroke-primary;
+        }
+      }
+    }
+  
+    &-secondary {
+      .timer-progress {
+        &-back-bar {
+          @apply stroke-secondary;
+          opacity: 0.2;
+        }
+  
+        &-front-bar {
+          @apply stroke-secondary;
+        }
+      }
+    }
+  
+    &-accent {
+      .timer-progress {
+        &-back-bar {
+          @apply stroke-accent;
+          opacity: 0.2;
+        }
+  
+        &-front-bar {
+          @apply stroke-accent;
+        }
+      }
+    }
+    &-info {
+      .timer-progress {
+        &-back-bar {
+          @apply stroke-info;
+          opacity: 0.2;
+        }
+  
+        &-front-bar {
+          @apply stroke-info;
+        }
+      }
+    }
+  
+    &-success {
+      .timer-progress {
+        &-back-bar {
+          @apply stroke-success;
+          opacity: 0.2;
+        }
+  
+        &-front-bar {
+          @apply stroke-success;
+        }
+      }
+    }
+  
+    &-warning {
+      .timer-progress {
+        &-back-bar {
+          @apply stroke-warning;
+          opacity: 0.2;
+        }
+  
+        &-front-bar {
+          @apply stroke-warning;
+        }
+      }
+    }
+  
+    &-error {
+      .timer-progress {
+        &-back-bar {
+          @apply stroke-error;
+          opacity: 0.2;
+        }
+  
+        &-front-bar {
+          @apply stroke-error;
+        }
+      }
+    }
+  
+    &-gradient {
+      .timer-progress {
+        &-back-bar {
+          stroke:  url(#gradientColor);
+          opacity: 0.2;
+        }
+  
+        &-front-bar {
+          stroke:  url(#gradientColor);
+        }
+      }
+    }
+  
+  
+    .timer-progress {
+      @apply relative flex flex-col items-center;
+      > span {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-light;
+      }
+  
+      &-date-part {
+        @apply uppercase absolute font-normal tracking-[0.2em] ;
+      }
+  
+      &-back-bar {
+        stroke-linecap: round;
+        fill: none;
+        opacity: 0.2;
+      }
+  
+      &-front-bar {
+        stroke-linecap: round;
+        fill: none;
+        stroke-width: 5px;
+        stroke-dasharray: 332.669;
+        transform: rotate(-90deg);
+        transform-origin: center center;
+        transition: all 0.2s linear;
+      }
+    }
+  }
+  
