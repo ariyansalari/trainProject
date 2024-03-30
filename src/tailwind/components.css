@@ -9,4 +9,5 @@
 @import './components/comment.css';
 @import './components/alert.css';
 @import './components/textbox.css';
-@import './components/notification.css'
+@import './components/notification.css';
+@import './components/timer.css'
