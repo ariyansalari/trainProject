@@ -1,8 +1,13 @@
 'use client'
-import { AuthCode, AuthCodeRef, Button } from '@/app'
+import { AuthCode, AuthCodeRef, Button, Timer } from '@/app'
 import Link from 'next/link'
 import React, { useRef } from 'react'
 
+const getTwoMinutesFromNow=()=>{
+  const time =new Date()
+  time.setSeconds(time.getSeconds()+120)
+  return time
+}
 export const VerificationForm = () => {
   const authCodeRef=useRef<AuthCodeRef>(null)
   return (
@@ -18,7 +23,7 @@ console.log(value);
     }}/>
 
 
-      Timer
+    <Timer className='my-8' size='small' expiryTimestamp={getTwoMinutesFromNow()} showDays={false} showHours={false} />
       <Button
       onClick={authCodeRef.current?.focus}
         isLink={true}
