@@ -1,5 +1,5 @@
 import { Notification } from "@/types";
-import { generateID } from "@/utils";
+import { generateID } from "../utils";
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 
