@@ -1,7 +1,7 @@
 'use client'
+import { useNotificationStore } from "../../../store";
 import { NotificationToast } from "./notification-toast";
 import { NotificationProps } from "./notification.type";
-import { useNotificationStore } from "@/store";
 
 export const Notifications: React.FC<NotificationProps> = () => {
   const notifications = useNotificationStore((state) => state.notifications);
