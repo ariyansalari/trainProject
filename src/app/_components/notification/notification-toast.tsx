@@ -1,10 +1,11 @@
 "use client";
-import { Notification, NotificationType } from "@/types/notification.interface";
+import { NotificationType } from "@/types/notification.interface";
 import { ReactNode, useEffect, useState } from "react";
-import { IconCheck, IconClose, IconError, IconInfo } from "../icons/icons";
+import { IconCheck, IconError, IconInfo } from "..";
+
 import { NotificationToastProps } from "./notification.type";
-import { useNotificationStore } from "@/store";
 import { ProgressBar } from "..";
+import { useNotificationStore } from "../../../store/notification.store";
 
 const notificationTypes: Record<NotificationType, string> = {
   success: "bg-success",

@@ -5,7 +5,7 @@ import { Loading } from "../loading";
 import { VideoProps } from "./video-player.type";
 import { useVideo } from ".";
 import { ProgressBar } from "..";
-import { secondsToHHMMSS } from "@/utils";
+import { secondsToHHMMSS } from "../../../utils";
 export const VideoPlayer:React.FC<VideoProps> = ({src,poster=''}) => {
     const {currentTime,duration,progress,isPlaying,isVideoLoaded,isVideoWaited,pause,play,videoRef,fullScreen}=useVideo(src)
   return (

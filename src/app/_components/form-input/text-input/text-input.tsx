@@ -1,6 +1,6 @@
 import { FieldValues, get } from "react-hook-form";
 import { TextInputProps } from "./text-input.type";
-import { TextBox } from "@/app";
+import { TextBox } from "../..";
 
 export const TextInput = <TFormValues extends FieldValues>({
   name,

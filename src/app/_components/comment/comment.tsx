@@ -1,7 +1,8 @@
 import React from "react";
-import { API_URL } from "@/configs/global";
 import { CommentProps } from "./comment.type";
-import { Avatar, Rating } from "@/app";
+import { Avatar } from "../avatar";
+import { Rating } from "..";
+import { API_URL } from "../../../configs/global";
 
 export const Comment: React.FC<CommentProps> = ({
     userId,

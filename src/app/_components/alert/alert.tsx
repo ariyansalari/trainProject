@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { AlertProps } from "./alert.type";
-import { IconInfo } from "@/app";
+import { IconInfo } from "..";
 
 export const Alert: React.FC<AlertProps> = ({
     variant,
