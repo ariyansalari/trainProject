@@ -1,7 +1,7 @@
 "use client";
 import { NotificationType } from "@/types/notification.interface";
 import { ReactNode, useEffect, useState } from "react";
-import { IconCheck, IconError, IconInfo } from "..";
+import { IconCheck, IconClose, IconError, IconInfo } from "..";
 
 import { NotificationToastProps } from "./notification.type";
 import { ProgressBar } from "..";
