@@ -13,6 +13,119 @@ exports[`display the home hero section :
     <div className="mt-5 flex gap-4 justify-center xl:justify-end">
     <Button variant="neutral" size="large">مشاوره برنامه نویسی</Button>
   
+      <Button className='animated-icon '  variant="primary" size="large"
+      >
+        <IconArrowLeftFill  fill='currentColor'/>
+        دوره های ری اکت و نکست</Button>
+  
+  
+    </div>
+    <Image className="grayscale hover:grayscale-0 transition-all mt-4 opacity-70 m-auto xl:m-0 self-end "  src={"/images/frameworks.png"}  width={412} height={39} alt="frameworks"/>
+  </div>
+  <Image src={"/images/programmer-landing.svg"} width={702} height={521} alt="programmer landing" />
+  
+  </div>
+  
+  </section> 1`] = `
+<div>
+  <section
+    class="bg-hero-pattern bg-no-repeat mt-5 xl:mt-20 xl:bg-left"
+  >
+    <div
+      class="container flex flex-col-reverse items-center xl:flex-row-reverse"
+    >
+      <div
+        class="flex flex-col gap-5 mt-12 pb-5 text-center xl:text-right"
+      >
+        <h3
+          class="text-xl dark:text-info xl:text-2xl"
+        >
+          ... خوش اومدی به
+        </h3>
+        <h1
+          class="text-3xl lg:text-3xl xl:text-5xl font-black gradiant"
+        >
+          مسیره صعود به قله های برنامه نویسی
+        </h1>
+        <p>
+          هر جای مسیر برنامه نویسی که باشی، با هم های استاده های با تجربه کلاسی می تونی بدون محدودیت به قله های بالاتر صعودی کنی . ما همیشه هواتو داریم
+        </p>
+        <div
+          class="mt-5 flex gap-4 justify-center xl:justify-end"
+        >
+          <button
+            class="btn btn-neutral btn-lg"
+            type="button"
+          >
+            مشاوره برنامه نویسی
+          </button>
+          <button
+            class="btn animated-icon  btn-primary btn-lg"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.7544 11.5347L20.5098 11.2026C21.3525 11.2026 22.0358 11.8925 22.0358 12.7435C22.0358 13.5945 21.3525 14.2844 20.5098 14.2844L16.7544 13.9523C16.0933 13.9523 15.5573 13.4111 15.5573 12.7435C15.5573 12.0748 16.0933 11.5347 16.7544 11.5347Z"
+                opacity=".4"
+              />
+              <path
+                d="M4.14372 11.5957C4.20242 11.5365 4.42169 11.286 4.62767 11.078C5.82925 9.77526 8.96663 7.64503 10.6079 6.9931C10.857 6.8891 11.4872 6.66769 11.8249 6.65204C12.1472 6.65204 12.4551 6.72696 12.7485 6.87457C13.1151 7.08144 13.4075 7.40796 13.5692 7.79263C13.6722 8.05877 13.8338 8.85831 13.8338 8.87285C13.9944 9.74619 14.0819 11.1663 14.0819 12.7363C14.0819 14.2303 13.9944 15.5923 13.8626 16.4802C13.8482 16.4958 13.6866 17.4877 13.5105 17.8276C13.1882 18.4494 12.5581 18.8341 11.8836 18.8341H11.8249C11.3853 18.8195 10.4617 18.4337 10.4617 18.4203C8.90794 17.7684 5.84475 15.741 4.61328 14.3936C4.61328 14.3936 4.26554 14.0469 4.11493 13.8311C3.88015 13.5202 3.76276 13.1355 3.76276 12.7509C3.76276 12.3215 3.89455 11.9223 4.14372 11.5957Z"
+              />
+            </svg>
+            دوره های ری اکت و نکست
+          </button>
+        </div>
+        <img
+          alt="frameworks"
+          class="grayscale hover:grayscale-0 transition-all mt-4 opacity-70 m-auto xl:m-0 self-end "
+          data-nimg="1"
+          decoding="async"
+          height="39"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fframeworks.png&w=828&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fframeworks.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fframeworks.png&w=828&q=75 2x"
+          style="color: transparent;"
+          width="412"
+        />
+      </div>
+      <img
+        alt="programmer landing"
+        data-nimg="1"
+        decoding="async"
+        height="521"
+        loading="lazy"
+        src="/images/programmer-landing.svg"
+        style="color: transparent;"
+        width="702"
+      />
+    </div>
+  </section>
+</div>
+`;
+
+exports[`display the home hero section : 
+        <section className="bg-hero-pattern bg-no-repeat mt-5 xl:mt-20 xl:bg-left">
+    <div className="container flex flex-col-reverse items-center xl:flex-row-reverse">
+  
+  <div className="flex flex-col gap-5 mt-12 pb-5 text-center xl:text-right">
+    <h3 className="text-xl dark:text-info xl:text-2xl">... خوش اومدی به</h3>
+    <h1 className="text-3xl lg:text-3xl xl:text-5xl font-black gradiant">مسیره صعود به قله های برنامه نویسی</h1>
+    <p>
+      هر جای مسیر برنامه نویسی که باشی، با هم های استاده های با تجربه کلاسی می تونی بدون محدودیت به قله های بالاتر صعودی کنی . ما همیشه هواتو داریم
+    </p>
+    <div className="mt-5 flex gap-4 justify-center xl:justify-end">
+    <Button variant="neutral" size="large">مشاوره برنامه نویسی</Button>
+  
       <Button variant="primary" size="large">دوره های ری اکت و نکست</Button>
   
   
