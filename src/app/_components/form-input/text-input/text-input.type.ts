@@ -4,7 +4,6 @@ import {
   FieldError,
   FieldValues,
   Path,
-  RegisterOptions,
   UseFormRegister,
 } from "react-hook-form";
 
@@ -12,5 +11,4 @@ export type TextInputProps<TFormValues extends FieldValues> = Omit<TextboxProps,
   register: UseFormRegister<TFormValues>;
   errors?: Partial<DeepMap<TFormValues, FieldError>>;
   name: Path<TFormValues>;
-  rules?: RegisterOptions;
 };

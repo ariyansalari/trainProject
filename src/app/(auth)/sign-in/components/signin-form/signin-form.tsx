@@ -6,14 +6,17 @@ import { useNotificationStore } from "@/store";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-
+import { zodResolver } from "@hookform/resolvers/zod";
+import { signInSchema } from "../../types/signin.schema";
 export const SignInForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     getValues
-  } = useForm<SignInFormProps>();
+  } = useForm<SignInFormProps>({
+    resolver:zodResolver(signInSchema)
+  });
   const router=useRouter()
   const showNotification=useNotificationStore(state=>state.showNotification)
 
@@ -41,17 +44,7 @@ showNotification({
         <TextInput
           register={register}
           name={"mobile"}
-          rules={{
-            required: "شماره موبایل الزامی می باشد",
-            maxLength: {
-              value: 11,
-              message: "شماره موبایل باید 11 رقم باشد",
-            },
-            minLength: {
-              value: 11,
-              message: "شماره موبایل باید 11 رقم باشد",
-            },
-          }}
+     
           errors={errors}
         />
         <Button type="submit" variant="primary" isLoading={signIn.isPending}>
