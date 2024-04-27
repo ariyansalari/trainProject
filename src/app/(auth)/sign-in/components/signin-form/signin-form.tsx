@@ -1,36 +1,47 @@
-"use client"
+"use client";
 
 import { Button, TextInput } from "@/app";
-import { SignInFormProps, useSignIn } from "@/app/(auth)";
+import { SignInFormProps, signInSchema } from "@/app/(auth)";
 import { useNotificationStore } from "@/store";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { signInSchema } from "../../types/signin.schema";
+import { signInAction } from "@/actions";
+import { useFormState } from "react-dom";
+import { useEffect } from "react";
 export const SignInForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    getValues
+    getValues,
   } = useForm<SignInFormProps>({
-    resolver:zodResolver(signInSchema)
+    resolver: zodResolver(signInSchema),
   });
-  const router=useRouter()
-  const showNotification=useNotificationStore(state=>state.showNotification)
+  const [formState, action] = useFormState(signInAction, {
+    message: "",
+  });
+  const router = useRouter();
+  const showNotification = useNotificationStore(
+    (state) => state.showNotification
+  );
 
-  const signIn=useSignIn({
-    onSuccess:()=>{
-router.push(`/verify?mobile=${getValues('mobile')}`)
-showNotification({
-  message:"کد تایید با موفقیت ارسال شد ",
-  type:"info"
-})
-    }
+  // router.push(`/verify?mobile=${getValues('mobile')}`)
+ 
+  useEffect(()=>{
+if(formState.message){
+ showNotification({
+    message:formState.message,
+    type:"error"
   })
+}
+  },[formState,showNotification])
   const onSubmit = (data: SignInFormProps) => {
-   signIn.SubmitForm(data);
+    //  signIn.SubmitForm(data);
+    const formData = new FormData();
+    formData.append("mobile", data.mobile);
+
+    action(formData);
   };
 
   return (
@@ -41,16 +52,11 @@ showNotification({
         className="flex flex-col gap-6 mt-16"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <TextInput
-          register={register}
-          name={"mobile"}
-     
-          errors={errors}
-        />
-        <Button type="submit" variant="primary" isLoading={signIn.isPending}>
+        <TextInput register={register} name={"mobile"} errors={errors} />
+        <Button type="submit" variant="primary">
           تایید و دریافت کد
         </Button>
       </form>
-    </> 
+    </>
   );
 };
