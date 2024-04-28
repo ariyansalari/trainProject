@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signInAction } from "@/actions";
 import { useFormState } from "react-dom";
-import { useEffect } from "react";
+import { useEffect, useTransition } from "react";
 export const SignInForm = () => {
   const {
     register,
@@ -19,6 +19,7 @@ export const SignInForm = () => {
     resolver: zodResolver(signInSchema),
   });
   const [formState, action] = useFormState(signInAction,null);
+  const [isPending,startTransition]=useTransition()
   const router = useRouter();
   const showNotification = useNotificationStore(
     (state) => state.showNotification
@@ -44,7 +45,11 @@ if(formState && !formState.isSuccess && formState.error){
     const formData = new FormData();
     formData.append("mobile", data.mobile);
 
-    action(formData);
+    startTransition(async()=>{
+     await action(formData);
+
+    })
+
   };
 
   return (
@@ -56,7 +61,7 @@ if(formState && !formState.isSuccess && formState.error){
         onSubmit={handleSubmit(onSubmit)}
       >
         <TextInput register={register} name={"mobile"} errors={errors} />
-        <Button type="submit" variant="primary">
+        <Button isLoading={isPending} type="submit" variant="primary">
           تایید و دریافت کد
         </Button>
       </form>
