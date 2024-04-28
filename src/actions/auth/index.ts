@@ -1,28 +1,26 @@
 'use server'
 
-import { signInSchema } from "@/app/(auth)";
-import { redirect } from "next/navigation";
+import { SignInFormProps, signInSchema } from "@/app/(auth)";
+import { OperationResult } from "@/types";
+import { serverActionWrapper } from "..";
+import { createData } from "@/core/http-service/http-service";
 
-export async function signInAction(formState:{message:string},formData:FormData) {
-  const mobile =formData.get('mobile')
+export async function signInAction(formState:OperationResult<string>|null,formData:FormData) {
+  const mobile =formData.get('mobile') as string
 
-    const validateData=signInSchema.safeParse({
-        mobile
-    })
-    if(!validateData.success){
-     return{
-        message:"خطا در فرمت موبایل"
-     }
+    // const validateData=signInSchema.safeParse({
+    //     mobile
+    // })
+    // if(!validateData.success){
+    //  return{
+    //     message:"خطا در فرمت موبایل"
+    //  }
         
-    }else{
-try{
-throw "خطا در برقراری ارتباط با سرور"
-}catch(error){
-return{
-    message:error as string
-}
-}
-        
-    }
+    // }else{
+return serverActionWrapper(async()=>await createData<SignInFormProps,string>('/signin',{
+    mobile
+}))
+
+
     
 }
