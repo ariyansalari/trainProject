@@ -18,21 +18,24 @@ export const SignInForm = () => {
   } = useForm<SignInFormProps>({
     resolver: zodResolver(signInSchema),
   });
-  const [formState, action] = useFormState(signInAction, {
-    message: "",
-  });
+  const [formState, action] = useFormState(signInAction,null);
   const router = useRouter();
   const showNotification = useNotificationStore(
     (state) => state.showNotification
   );
 
-  // router.push(`/verify?mobile=${getValues('mobile')}`)
  
   useEffect(()=>{
-if(formState.message){
+if(formState && !formState.isSuccess && formState.error){
  showNotification({
-    message:formState.message,
+    message:formState.error.detail!,
     type:"error"
+  })
+}else if(formState && formState.isSuccess) {
+  router.push(`/verify?mobile=${getValues('mobile')}`)
+  showNotification({
+    message:'کد تایید به شماره ارسال شد',
+    type:"info"
   })
 }
   },[formState,showNotification])
