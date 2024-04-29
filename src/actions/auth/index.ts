@@ -1,6 +1,6 @@
 'use server'
 
-import { SignInFormProps, signInSchema } from "@/app/(auth)";
+import { SendAuthCode, SignInFormProps, signInSchema } from "@/app/(auth)";
 import { OperationResult } from "@/types";
 import { serverActionWrapper } from "..";
 import { createData } from "@/core/http-service/http-service";
@@ -23,4 +23,8 @@ return serverActionWrapper(async()=>await createData<SignInFormProps,string>('/s
 
 
     
+}
+export async function sendAuthCode (formState:OperationResult<string>|null , mobile:string){
+
+  return serverActionWrapper(async()=>  createData<SendAuthCode,string>("/send-auth-code", { mobile }))
 }
