@@ -4,13 +4,14 @@ import CredentialsProvider from 'next-auth/providers/credentials'
 import { createData } from './core/http-service/http-service';
 import { User } from './types/user.inrerface';
 import { API_URL } from './configs';
+import { VerifyUserModel } from './types';
 
 declare module 'next-auth'{
     interface User{
         accessToken:string
     }
 }
-const {
+export const {
     signIn,
     signOut,
     handlers:{
@@ -31,14 +32,16 @@ const {
                 try{
 const user=await createData<VerifyUserModel,User>(`${API_URL}/verify`,{
      username:credentials.username as string,
-     password:credentials.code as string
+     code:credentials.code as string
 })
+console.log(user.token);
+
 return {
     accessToken:user.token
 }
                 }
                 catch(error:unknown){
-throw new Error('')
+throw new Error('ajb')
                 }
             }
         })

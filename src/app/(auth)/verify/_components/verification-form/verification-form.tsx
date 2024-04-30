@@ -2,12 +2,12 @@
 import { AuthCode, AuthCodeRef, Button, TimeRef, Timer } from '@/app'
 import { useNotificationStore } from '@/store'
 import Link from 'next/link'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState, useTransition } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { VerfiyUserModel } from '@/app/(auth)'
 import { useFormState } from 'react-dom'
-import { sendAuthCode } from '@/actions'
+import { sendAuthCode, verify } from '@/actions'
 
 const getTwoMinutesFromNow=()=>{
   const time =new Date()
@@ -21,6 +21,8 @@ export const VerificationForm = ({mobile}:{mobile:string}) => {
   const username=params.get('mobile')!;
 const timerRef=useRef<TimeRef>(null)
 const [sendAuthCodeState,setAuthCodeAction]=useFormState(sendAuthCode,null)
+const [verifyState,verifyAction]=useFormState(verify,undefined)
+const [verifyPendingState,startTransition]=useTransition()
   const authCodeRef=useRef<AuthCodeRef>(null)
 const showNotification=useNotificationStore(state=>state.showNotification)
 const {register,setValue,formState:{isValid},handleSubmit}=useForm<VerfiyUserModel>()
@@ -41,8 +43,14 @@ useEffect(()=>{
 },[sendAuthCodeState,showNotification])
 const onSubmit=(data:VerfiyUserModel)=>{
   data.username=username
-  console.log(data);
-  
+  const formData=new FormData()
+  formData.append('username',data.username)
+  formData.append('code',data.code)
+
+  startTransition(async()=>{
+    verifyAction(formData)
+  })
+
 }
 register('code',{
   validate:(value)=>(value??'').length===5
@@ -77,6 +85,7 @@ setValue('code',value,{shouldValidate:true})
         ارسال مجدد کد تایید
       </Button>
       <Button
+      isLoading={verifyPendingState}
       isDisabled={!isValid}
         type="submit"
         variant="primary"

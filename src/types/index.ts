@@ -9,3 +9,4 @@ export * from "./course-lecture.interface";
 export * from "./notification.interface"
 export * from "./http-errors.interface"
 export * from "./operation-result"
+export * from "./verify-user.type"
