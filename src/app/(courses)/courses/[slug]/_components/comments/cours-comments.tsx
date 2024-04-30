@@ -29,7 +29,6 @@ if(inView && hasNextPage){
 fetchNextPage()
 }
   },[inView,fetchNextPage,hasNextPage])
-  console.log(comments);
 if(error){
   return (
     <>
