@@ -13,7 +13,6 @@ export const CourseCurriculum: React.FC<CourseCurriculumProps> = ({ data }) => {
     const toggleAccordion = (index: number) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
-console.log(activeIndex);
 
     return (
         <div className="accordion">
